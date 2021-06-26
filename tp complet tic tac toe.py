@@ -1,4 +1,4 @@
-#ISMAEL COULIBALY           Tic tac toe complet
+#ISMAEL COULIBALY        
 import random
 import pygame
 import sys
