@@ -1,4 +1,4 @@
-#ISMAEL COULIBALY        
+#ISMAEL COULIBALY
 import random
 import pygame
 import sys
@@ -134,20 +134,25 @@ def drawCross(fenetre,case):# cette fonction dessine une croix
 fenetreGeneralisation = pygame.display.set_mode(Taille)
 rectangle = pygame.draw.rect(fenetreGeneralisation,rouge, (300,600,300,600))
 font = pygame.font.Font(pygame.font.get_default_font(), 32)     
-text = font.render('Combien de colonnes et de lignes voulez-vous ? ', True, noir)
-textRect = text.get_rect()
-textRect.center = (150, 300)
-fenetreGeneralisation.blit(text, textRect)
+##text = font.render('Combien de colonnes et de lignes voulez-vous ? ', True, noir)
+##textRect = text.get_rect()
+##textRect.center = (150, 300)
+##fenetreGeneralisation.blit(text, textRect)
 
-pygame.display.flip()
-nbRec = int(input("Combien de colonnes et de lignes voulez-vous ?"))
-positionRectangle=[25,25,150,150]
-for i in range(0,nbRec):
-    for y in range (0,nbRec):
-        rec = pygame.draw.rect(fenetre,blanc,positionRectangle)
-        positionRectangle[1] = 175 +positionRectangle[1] 
-    positionRectangle[1] =25
-    positionRectangle[0] = 175 + positionRectangle[0] 
+##pygame.display.flip()
+##nbRec = int(input("Combien de colonnes et de lignes voulez-vous ?"))
+##positionRectangle=[25,25,150,150]
+
+#tabRec=[] ##tableau contenant aussi les rectangles qu'on dessin
+#tabRecDisponiblite=[] ## tableau qui permet de verifier si la case est disponible ou non
+#for i in range(0,nbRec):
+ #   for y in range (0,nbRec):
+  #      rec = pygame.draw.rect(fenetre,blanc,positionRectangle)
+   #     tabRec.append(rec)
+        #tabRecDisponiblite.append(true)   
+#        positionRectangle[1] = 175 +positionRectangle[1] 
+#    positionRectangle[1] =25
+#    positionRectangle[0] = 175 + positionRectangle[0] 
 
 choisirSymbole(choices)
 choixJoueur = choisirSymbole(choices)
@@ -157,15 +162,24 @@ pygame.display.flip()
 ###########generalisation du jeu
 
 
-#gagnant
-
 pygame.display.flip()
 
 pygame.display.set_caption("bienvenue!")
 
+rec_1=pygame.draw.rect(fenetre,blanc,(25,25,150,150))
+rec_2=pygame.draw.rect(fenetre,blanc,(200,25,150,150))
+rec_3=pygame.draw.rect(fenetre,blanc,(375,25,150,150))
+
+rec_4=pygame.draw.rect(fenetre,blanc,(25,200,150,150))
+rec_5=pygame.draw.rect(fenetre,blanc,(200,200,150,150))
+rec_6=pygame.draw.rect(fenetre,blanc,(375,200,150,150))
+
+rec_7=pygame.draw.rect(fenetre,blanc,(25,375,150,150))
+rec_8=pygame.draw.rect(fenetre,blanc,(200,375,150,150))
+rec_9=pygame.draw.rect(fenetre,blanc,(375,375,150,150))
 
 
-#boucle jusqu'à ce que l'utilisateur décide de fermer la fenêtre
+#boucle jusqu'Ã  ce que l'utilisateur dÃ©cide de fermer la fenÃªtre
 termine = False
 rect_circle_switch = True
 case1_disponible = True
@@ -183,7 +197,7 @@ cases = [[case1_disponible, case2_disponible,case3_disponible],
 [case7_disponible,case8_disponible,case9_disponible]]
 
 
-#à quelle vitesse l'écran met à jour
+#Ã  quelle vitesse l'Ã©cran met Ã  jour
 # vitesse de jeu,
 #attention a C de Clock
 horloge = pygame.time.Clock()
@@ -283,7 +297,7 @@ def gagnant(grille):
         textRect = text.get_rect()
         textRect.center = (150, 300)
         fenetreGagnant.blit(text, textRect)
-
+case1_disponible
 
 while termine == False:
 
